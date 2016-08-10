@@ -10,7 +10,7 @@ public abstract class Entity {
     public Entity(){
         this.x = 0;
         this.y = 0;
-        this.lane = 0;
+        this.lane = 1;
     }
 
     public Entity(int lane){
@@ -26,7 +26,9 @@ public abstract class Entity {
         this.lane = lane;
     }
 
-
+    public void shift(int dst){
+        this.lane += dst;
+    }
 
     // Getters & Setters
     public int getLane(){
